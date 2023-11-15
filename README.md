@@ -95,14 +95,15 @@ Attributes: Rabbit-Hole ID, Title, Created_at, Description, Carrot-Pot ID (Forei
 
 **Relationship**
 
-A user may submit one or more tasks/proposals; A task/proposal can only have one user (owner)
-A task can have one or more contributions; A contribution can only have one task
-A contribution can have one or more validations; A validation can only have one contribution.
-A user may have one or more contributions and a contribution can be associated with only one user. 
-A user may have one or more validations; A validation can only have one user
-A Rabbit-Hole can have one or many users; A user can have one or many Rabbit-Holes
-A user must have only one wallet; A wallet can only have one user
-A Rabbit-Hole must have one Carrot-Pot; A Carrot-Pot can only have one Rabbit-Hole
+-A user may submit one or more tasks/proposals; A task/proposal can only have one user (owner)
+-A task can have one or more contributions; A contribution can only have one task
+-A contribution can have one or more validations; A validation can only have one contribution.
+-A user may have one or more contributions and a contribution can be associated with only one user. 
+-A user may have one or more validations; A validation can only have one user
+-A Rabbit-Hole can have one or many users; A user can have one or many Rabbit-Holes
+-A user must have only one wallet; A wallet can only have one user
+-A Rabbit-Hole must have one Carrot-Pot; A Carrot-Pot can only have one Rabbit-Hole
+
 
 **Diagram**
 
