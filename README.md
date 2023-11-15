@@ -96,7 +96,6 @@ Attributes: Wallet ID, User ID (Foreign Key), total
 
 **-Carrot-Pot (community wallet)**
 Attributes: Carrot-Pot ID, Rabbit-Hole ID (Foreign Key), total
-
 **-Rabbit-Hole**
 Attributes: Rabbit-Hole ID, Title, Created_at, Description, Carrot-Pot ID (Foreign Key)
 
@@ -118,6 +117,68 @@ Attributes: Rabbit-Hole ID, Title, Created_at, Description, Carrot-Pot ID (Forei
 
 -A Rabbit-Hole must have one Carrot-Pot; A Carrot-Pot can only have one Rabbit-Hole
 
+# Tables:
+
+## Auth:
+- **User UID (Primary Key)**
+- Email
+- Phone
+- Provider
+- Created
+- Last Sign-In
+
+## Users:
+- **User ID (Primary Key)**
+- Username
+- Firstname
+- Lastname
+- Email
+- Created_at
+- Wallet ID (Foreign Key to Wallet table)
+
+## Task/Proposal:
+- **Task ID (Primary Key)**
+- Title
+- Created_at
+- Update_at
+- Description
+- Expiration
+- Validation Period
+- Timeline
+- Reward
+- User ID (Foreign Key to Users table)
+
+## Contribution:
+- **Contribution ID (Primary Key)**
+- Title
+- Description
+- Created_at
+- Task ID (Foreign Key to Task/Proposal table)
+
+## Validation:
+- **Validate ID (Primary Key)**
+- Review
+- Rating
+- Stake
+- Created_at
+- Contribution ID (Foreign Key to Contribution table)
+
+## Wallet:
+- **Wallet ID (Primary Key)**
+- User ID (Foreign Key to Users table)
+- Total
+
+## Carrot-Pot (Community Wallet):
+- **Carrot-Pot ID (Primary Key)**
+- Rabbit-Hole ID (Foreign Key to Rabbit-Hole table)
+- Total
+
+## Rabbit-Hole:
+- **Rabbit-Hole ID (Primary Key)**
+- Title
+- Created_at
+- Description
+- Carrot-Pot ID (Foreign Key to Carrot-Pot table)
 
 
 **Diagram**
