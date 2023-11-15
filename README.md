@@ -78,31 +78,46 @@ Allow users to define the expiration, timeline, reward, and validation period fo
 
 **-Auth (Supabase provided)**
  Attributes: User UID, Email, Phone, Provider, Created, Last Sign-In
+
 **-Users**
 Attributes: User ID, username, firstname, lastname, email, Created_at, Wallet ID
+
 **-Task/Proposal**
  Attributes: Task ID, Title, Created_at, Update_at, Description, Expiration, Validation Period, Timeline, Reward
+
 **-Contribution**
 Attributes: Contribution ID, Title, Description, Created_at, Task ID (Foreign Key)
+
 **-Validation**
 Attributes: Validate ID, Review, Rating, Stake, Created-at, Contribution ID (Foreign Key)
+
 **-Wallet**
 Attributes: Wallet ID, User ID (Foreign Key), total
+
 **-Carrot-Pot (community wallet)**
 Attributes: Carrot-Pot ID, Rabbit-Hole ID (Foreign Key), total
+
 **-Rabbit-Hole**
 Attributes: Rabbit-Hole ID, Title, Created_at, Description, Carrot-Pot ID (Foreign Key)
 
 **Relationship**
 
 -A user may submit one or more tasks/proposals; A task/proposal can only have one user (owner)
+
 -A task can have one or more contributions; A contribution can only have one task
+
 -A contribution can have one or more validations; A validation can only have one contribution.
+
 -A user may have one or more contributions and a contribution can be associated with only one user. 
+
 -A user may have one or more validations; A validation can only have one user
+
 -A Rabbit-Hole can have one or many users; A user can have one or many Rabbit-Holes
+
 -A user must have only one wallet; A wallet can only have one user
+
 -A Rabbit-Hole must have one Carrot-Pot; A Carrot-Pot can only have one Rabbit-Hole
+
 
 
 **Diagram**
